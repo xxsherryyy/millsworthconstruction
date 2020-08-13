@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: border-box; 
     margin: 0;
-    font-family: Cabin, 'Open Sans', sans-serif;
+    font-family: Poppins, Cabin, 'Open Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
     background: ${(props) => props.theme.colors.background};
@@ -39,7 +39,7 @@ const theme = {
   ...preset,
   colors,
   fonts: {
-    body: 'Cabin, Open Sans, sans-serif',
+    body: 'Poppins, Cabin, Open Sans, sans-serif',
     heading: 'inherit',
     monospace: 'monospace',
   },

@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-mate",
+  "name": "millsworthconstruction",
   "version": "2.5.3",
-  "description": "Gatsby v2 starter to create a top notch portfolio!",
+  "description": "Millsworth Construction",
   "main": "index.js",
   "scripts": {
     "pre-build": "node scripts/get-about",
@@ -16,23 +16,17 @@
     "test:open": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
     "test:ci": "DETERMINISTIC=true start-server-and-test 8000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EmaSuriano/gatsby-starter-mate.git"
-  },
+
   "keywords": [
     "gatsby",
     "starter",
     "contentful",
     "PWA",
-    "portfolio"
+    "construction"
   ],
-  "author": "Ema Suriano",
+
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/EmaSuriano/gatsby-starter-mate/issues"
-  },
-  "homepage": "https://github.com/EmaSuriano/gatsby-starter-mate#readme",
+
   "dependencies": {
     "@babel/preset-env": "^7.10.3",
     "@fortawesome/fontawesome-free": "^5.13.1",

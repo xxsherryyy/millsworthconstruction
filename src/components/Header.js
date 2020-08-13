@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import Headroom from 'react-headroom';
-import { Flex, Image } from 'rebass/styled-components';
+import { Flex, Image, Heading, Button, Link} from 'rebass/styled-components';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import RouteLink from './RouteLink';
-import Logo from './Logo/Portfolio.svg';
+import Logo from './Logo/home.png';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -14,7 +14,7 @@ const HeaderContainer = styled(Headroom)`
   }
 
   .headroom--pinned {
-    background-color: ${(props) => props.theme.colors.primaryDark};
+    background-color: ${(props) => props.theme.colors.background};
   }
 
   position: absolute;
@@ -51,7 +51,8 @@ const Header = () => (
           const { home, links } = formatLinks(allLinks);
 
           const homeLink = home && (
-            <Image
+            <div>
+              {/* <Image
               src={Logo}
               width="50px"
               alt="Portfolio Logo"
@@ -59,7 +60,22 @@ const Header = () => (
               style={{
                 cursor: 'pointer',
               }}
-            />
+            /> */}
+            <Heading
+              alt="Home"
+              textAlign="left"
+              as="h3"
+              fontSize={[3, 5]}
+              ml={[0, 2, 3]}
+              color="text"
+              onClick={home.onClick}
+              style={{
+                cursor: 'pointer',
+              }}
+            >
+              Millsworth Construction
+            </Heading>
+             </div>
           );
           const navLinks = links.map(({ name, value }) => (
             <RouteLink
@@ -67,13 +83,16 @@ const Header = () => (
               onClick={value.onClick}
               selected={value.isSelected}
               name={name}
+              color="text"
+              mr={[6, 3, 5]}
             />
           ));
 
           return (
             <Fragment>
               {homeLink}
-              <Flex mr={[0, 3, 5]}>{navLinks}</Flex>
+              <Link href="tel:1-800-shane"><Button type="tel"  mr={[0, 3, 5]}>CALL OR TEXT 1-800-SHANE</Button></Link>
+          <Flex color="text" mr={[0, 3, 5]}>{navLinks}</Flex>
             </Fragment>
           );
         }}

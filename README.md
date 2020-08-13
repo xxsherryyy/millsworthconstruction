@@ -53,28 +53,6 @@ At the same time, as this portfolio is written with Gatsby is extremely easy to 
 
 ## How to start ▶️
 
-As this process needs more steps compared to other starters, I decided to made a tutorial video of how to set up your own instance of Mate. You can follow the video or jump directly to the written documentation.
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=YviWsypJF9c">
-   <img src="https://media.giphy.com/media/LQp2DrNPPUPybUwVx9/giphy.gif" alt="Watch the tutorial"/>
-  </a>
-</p>
-
-If you never used Gatsby before, I highly recommend you to [Set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)!
-
-To copy and install this starter run this command:
-
-```bash
-$ gatsby new mate-portfolio https://github.com/EmaSuriano/gatsby-starter-mate
-```
-
-At this point you have the repository download with all the dependencies installed, but if you try to start by running `yarn develop` you are going to received this message in the console:
-
-```bash
-  TypeError: Expected parameter accessToken
-```
-
 This is because you didn't specify from which `Contentful` space the portfolio will take the information. So the next step is create an empty space in [Contentful](https://www.contentful.com/)!
 
 After the space is created, run the following command:
@@ -158,24 +136,6 @@ As the starter is a SPA it only has two routes:
 
 This starters come with a hand-made color palette made by myself, but I highly encourage you to go and customize the colors to match your preference! The colors can be found inside [`colors.js`](./colors.js), which are going to be loaded by `ThemeProvider` of `styled-components` and apply across all the components inside the application.
 
-```javascript
-// colors.js
-module.exports = {
-  background: '#FFFFFF',
-  backgroundDark: '#f0e6f6',
-
-  text: '#333333',
-
-  primary: '#7c37ad',
-  primaryLight: '#ae66df',
-  primaryDark: '#4b007d',
-
-  secondary: '#ff4081',
-  secondaryLight: '#ff79b0',
-  secondaryDark: '#c60055',
-};
-```
-
 Some examples I made by using palettes from [Color Hunt](https://colorhunt.co/):
 
 ![Theming](./media/theming.png)
@@ -203,7 +163,7 @@ Regarding the projects and social links the process is the same! Contentful is r
 The starter comes with a built in End to End Setup using Cypress. As there are no complex logic flow, there are only two tests in place:
 
 1. Accessibility check: using the [cypress-axe](https://www.npmjs.com/package/cypress-axe) plugin you can easily check a lot of a11y rules at once powered by [Axe](https://www.deque.com/axe/)!
-2. Visual testing: using [percy-cypress](https://github.com/percy/percy-cypress) plugin you can take screenshot with different resolutions and easily the difference inside their platform. [Here](https://percy.io/Ema-suriano/gatsby-starter-mate) you can check the Percy dashboard for this project.
+2. Visual testing: using [percy-cypress](https://github.com/percy/percy-cypress) plugin you can take screenshot with different resolutions and easily the difference inside their platform. 
 
 ### Setting Visual Testing for your project (Optional) 📸
 
@@ -238,45 +198,9 @@ All the components inside `Layout` are `Section` components. A section can have 
 
 ## Tracking with Google Analytics (Optional) 📈
 
-This starter has the analytics plugin inside the `gatsby-config`, so the only need to do in order to enable it is to provide the `Tracking Id` for your site (starts with `UA-`). Just set a new variable inside your `.env` file called `ANALYTICS_ID` and analytics will be turn on automatically 😄
+This starter has the analytics plugin inside the `gatsby-config`, so the only need to do in order to enable it is to provide the `Tracking Id` for your site (starts with `UA-`). Just set a new variable inside your `.env` file called `ANALYTICS_ID` and analytics will be turn on automatically.
 
-## Update your Starter (Optional) 💡
 
-In case you cloned this repository before and you want all the latest changes of it, you can execute the following command to update the code in your repository with the one in this repository:
-
-```bash
-# Add repository remote entry
-$ git remote add mate https://github.com/EmaSuriano/gatsby-starter-mate
-
-# Get changes from master branch of gatsby-starter-mate
-$ git pull mate master --allow-unrelated-histories
-
-# Reset changes in unnecessary folder/files
-$ git reset media/ bin/ README.md manifest-config.js
-
-# Remove files affected by the reset
-$ git checkout .
-
-# In this step you might need to fix a lot of conflicts, you can do fix manually or use just accept all the changes from mate
-$ git checkout --theirs .
-
-# WATCH OUT that some configuration can be overwritten in this last step, like package.json, colors, etc. I highly recommend to do an overall look up at the end of fixing the conflicts.
-
-# Install in case there is any new dependency added to the starter
-$ yarn
-
-# Build the project to see if everything is working as expected
-$ yarn build
-```
-
-## Contributing 💪
-
-I came with the idea of creating the starter after the positive feedback I received when I deployed [my website](https://emasuriano.com/). Therefore this starter is not perfect! I tried my best to remove all the personal information, also improve the code to make it easier to understand.
-
-I'm totally open for pull requests with bug fixes, changes in Documentation, or new features to the starter 🙌
-
-Please check the [Contribution guidelines](CONTRIBUTING.md) before opening yours 🙏
-
-## License 📝
+## License
 
 MIT.

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { Heading, Flex, Box, Text } from 'rebass/styled-components';
+import { Heading, Flex, Box, Text, Button } from 'rebass/styled-components';
 import TextLoop from 'react-text-loop';
 import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
@@ -76,7 +76,7 @@ const LandingPage = () => (
               fontSize={[6, 7]}
               mb={[3, 4, 5]}
             >
-              {`Hello, I'm ${name}!`}
+              {`${name}`}
             </Heading>
 
             <Heading
@@ -97,14 +97,14 @@ const LandingPage = () => (
                   ))}
               </TextLoop>
             </Heading>
-
-            <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
+            <Button variant='primary' mx='auto'>Free Quote</Button>
+            {/* <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>
                   <SocialLink {...rest} />
                 </Box>
               ))}
-            </Flex>
+            </Flex> */}
             <SectionLink section="about">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>
