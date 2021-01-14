@@ -91,8 +91,8 @@ const Header = () => (
           return (
             <Fragment>
               {homeLink}
-              <Link href="tel:1-800-shane"><Button type="tel"  mr={[0, 3, 5]}>CALL OR TEXT 1-800-SHANE</Button></Link>
-          <Flex color="text" mr={[0, 3, 5]}>{navLinks}</Flex>
+              <Link href="tel:1-800-shane"><Button type="tel"  mr={[0, 3, 5]} p={[2,3]}>CALL OR TEXT 1-800-SHANE</Button></Link>
+          <Flex color="text"  mr={[0, 3, 4]} pr={[1,2,3]}>{navLinks}</Flex>
             </Fragment>
           );
         }}

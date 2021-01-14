@@ -7,14 +7,16 @@ import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
+import bgvideo from '../components/Logo/bgVideo.mp4';
+import BackgroundVideo from '../components/Background';
 
 const Background = () => (
   <div>
-    <Triangle
+    {/* <Triangle
       color="backgroundDark"
       height={['35vh', '80vh']}
       width={['95vw', '60vw']}
-    />
+    /> */}
 
     <Triangle
       color="secondary"
@@ -35,7 +37,8 @@ const Background = () => (
       width={['100vw', '100vw']}
       invertX
       invertY
-    />
+    />  
+   <BackgroundVideo mp4={bgvideo}/>
   </div>
 );
 
@@ -48,6 +51,7 @@ const LandingPage = () => (
         query SiteTitleQuery {
           contentfulAbout {
             name
+            description
             roles
             socialLinks {
               id
@@ -64,7 +68,7 @@ const LandingPage = () => (
         }
       `}
       render={({ contentfulAbout, site }) => {
-        const { name, socialLinks, roles } = contentfulAbout;
+        const { name, description, socialLinks, roles } = contentfulAbout;
         const { deterministicBehaviour } = site.siteMetadata;
 
         return (
@@ -74,11 +78,20 @@ const LandingPage = () => (
               as="h1"
               color="primary"
               fontSize={[6, 7]}
-              mb={[3, 4, 5]}
+              mb={[1, 2, 3]}
             >
               {`${name}`}
             </Heading>
-
+            <Heading
+              textAlign="center"
+              as="h3"
+              color="primary"
+              fontSize={[3, 4]}
+              mb={[3, 4, 5]}
+            >
+              {`${description}`}
+            </Heading>
+          
             <Heading
               as="h2"
               color="primary"
@@ -97,7 +110,7 @@ const LandingPage = () => (
                   ))}
               </TextLoop>
             </Heading>
-            <Button variant='primary' mx='auto'>Free Quote</Button>
+            <a textAlign="center" href="#contact"><Button variant='primary' mx='auto' href='#contact'>Free Quote</Button></a>
             {/* <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>

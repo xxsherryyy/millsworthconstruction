@@ -5,6 +5,8 @@ import { ScrollingProvider } from 'react-scroll-section';
 import config from 'react-reveal/globals';
 import preset from '@rebass/preset';
 import colors from '../../colors';
+import roof from './Logo/roof.jpg';
+import bgvideo from '../components/Logo/bgvideo.mp4';
 import Helmet from './Helmet';
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: Poppins, Cabin, 'Open Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
-    background: ${(props) => props.theme.colors.background};
+    background-image: src=("${bgvideo}");
+    background-size: 'cover'
     color: ${(props) => props.theme.colors.text};
   }
 `;

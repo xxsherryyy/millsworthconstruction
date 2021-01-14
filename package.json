@@ -16,7 +16,6 @@
     "test:open": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
     "test:ci": "DETERMINISTIC=true start-server-and-test 8000"
   },
-
   "keywords": [
     "gatsby",
     "starter",
@@ -24,12 +23,11 @@
     "PWA",
     "construction"
   ],
-
   "license": "MIT",
-
   "dependencies": {
     "@babel/preset-env": "^7.10.3",
     "@fortawesome/fontawesome-free": "^5.13.1",
+    "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@tippy.js/react": "^3.1.1",
     "contentful": "^7.14.3",
